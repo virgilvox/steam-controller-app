@@ -1,0 +1,16 @@
+{
+  "name": "steam-controller-app",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "virgilvox <moheeb.zara@citrix.com> (http://app.octoblu.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "steam-controller": "^1.0.5",
+    "websockets": "^0.2.0"
+  }
+}

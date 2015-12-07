@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+  <script type="text/javascript">
+
+  var ws = new WebSocket("ws://127.0.0.1:3030");
+
+  setInterval(function(){
+    ws.send('');
+  }, 100);
+
+  ws.onmessage = function (evt)
+  {
+    var data = JSON.parse(evt.data);
+    document.getElementById('button').innerHTML = JSON.stringify(data.button);
+    document.getElementById('pad').innerHTML = JSON.stringify(data.pad);
+    document.getElementById('mouse').innerHTML = JSON.stringify(data.mouse);
+    document.getElementById('center').innerHTML = JSON.stringify(data.center);
+    document.getElementById('joystick').innerHTML = JSON.stringify(data.joystick);
+    document.getElementById('thumbstick').innerHTML = JSON.stringify(data.thumbstick);
+    document.getElementById('trigger').innerHTML = JSON.stringify(data.trigger);
+    document.getElementById('bottom').innerHTML = JSON.stringify(data.bottom);
+  }
+  </script>
+
+</head>
+<body>
+
+  <h2>Buttons</h2>
+  <p id="button"></p>
+
+  <h2>Pad</h2>
+  <p id="pad"></p>
+
+  <h2>Mouse</h2>
+  <p id="mouse"></p>
+
+  <h2>Center</h2>
+  <p id="center"></p>
+
+  <h2>Joystick</h2>
+  <p id="joystick"></p>
+
+  <h2>Thumbstick</h2>
+  <p id="thumbstick"></p>
+
+  <h2>Triggers</h2>
+  <p id="trigger"></p>
+
+  <h2>Bottom</h2>
+  <p id="bottom"></p>
+
+
+
+</body>
+</html>
